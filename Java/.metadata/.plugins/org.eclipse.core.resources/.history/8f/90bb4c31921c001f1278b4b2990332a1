@@ -1,0 +1,13 @@
+
+public class Ex00출력입력문 {
+
+	public static void main(String[] args) {
+		// main 안쪽 코드만 컴파일을 통해서 실행.
+		
+		// 1. 출력문
+		System.out.println(12345);
+		System.out.println('12345');
+
+	}
+
+}

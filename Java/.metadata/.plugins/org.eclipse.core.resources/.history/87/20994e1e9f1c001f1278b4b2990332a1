@@ -1,0 +1,22 @@
+
+public class Ex03자료형 {
+
+	public static void main(String[] args) {
+		// 1. 논리형
+		// 1) boolean : 1byte(8bit - 2**8)
+		// true/false 값만 저장
+		
+		boolean isHot = true;
+		System.out.println(isHot);
+		
+		// 2. 문자형
+		// 1) char : 2byte
+		// 문자 한 개를 저장
+		// ''(작은따옴표)로 감싸줘야 한다.
+		
+		char firstName = '방';
+		System.out.println(firstName);
+
+	}
+
+}

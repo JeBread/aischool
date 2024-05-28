@@ -1,0 +1,21 @@
+
+public class Ex02상수 {
+
+	public static void main(String[] args) {
+		
+		// 상수 final
+		// 불변
+		// 데이터 담음. 한 번 담으면 아래쪽에서 값 변경 불가
+		final int a = 3;
+		System.out.println(a);
+		
+		final int b;
+		b = 5;
+		System.out.println(b);
+		
+		// camelCase : 변수
+		// PascalCase : 프로젝트명, 클래스명
+		
+	}
+
+}

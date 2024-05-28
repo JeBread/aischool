@@ -1,0 +1,14 @@
+
+public class Ex03자료형 {
+
+	public static void main(String[] args) {
+		// 1. 논리형
+		// 1) boolean : 1byte
+		// true/false 값만 저장
+		
+		boolean isHot = true;
+		System.out.println(isHot);
+
+	}
+
+}

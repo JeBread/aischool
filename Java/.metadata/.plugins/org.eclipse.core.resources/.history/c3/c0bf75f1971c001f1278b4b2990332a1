@@ -1,0 +1,17 @@
+
+public class Ex01변수 {
+
+	public static void main(String[] args) {
+		
+		// 변수
+		// 프로그래밍에서 데이터를 담을 수 있는 공간
+		
+		// a 라는 공간에 정수형(숫자) 데이터 3을 저장
+		int a = 3;
+		System.out.println(a);
+		double b = 3.3;
+		String c = "안녕";
+
+	}
+
+}
