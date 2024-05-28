@@ -8,8 +8,7 @@ public class Ex03자료형 {
 		
 		boolean isHot = true;
 		System.out.println(isHot);
-		isHot = false;
-		System.out.println(isHot);
+		
 		// 2. 문자형
 		// 1) char : 2byte
 		// 문자 한 개를 저장

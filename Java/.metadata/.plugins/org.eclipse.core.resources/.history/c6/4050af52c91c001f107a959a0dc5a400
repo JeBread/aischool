@@ -10,8 +10,7 @@ public class Ex00입력문 {
 		// System -> console
 		// out/in - 데이터가 입력되는지 출력되는지 여부
 
-		String name = sc.next();
-		System.out.println(name);
+		sc.next();
 		
 	}
 
