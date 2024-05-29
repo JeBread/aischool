@@ -55,6 +55,18 @@ public class Ex03자료형 {
 		char ch = (char) num;
 		System.out.println(ch);
 		
+		
+		// 문자열
+		// 레퍼런스형 데이터타입
+		// String : 문자열을 저장할 수 있는 데이터 타입
+		String name = "방상제";
+		System.out.println(name);
+		
+		// OOP
+		// 주소값 : 데이터가 저장되어있는 장소
+		// 주소값을 참조(Reference)하는 데이터 타입
+		
+		
 	}
 
 }

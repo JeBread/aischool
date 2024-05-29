@@ -1,0 +1,23 @@
+package 이항연산자;
+
+public class Ex01산술연산자 {
+
+	public static void main(String[] args) {
+		
+		// 산술연산자
+		// +, -, *, /, %
+		
+		int num1 = 3;
+		int num2 = 7;
+		
+		// ctrl + alt + 아래 방향키 하면 줄복사 가능
+		System.out.println(num1 + num2);
+		System.out.println(num1 - num2);
+		System.out.println(num1 * num2);
+		System.out.println(num1 / num2);
+		System.out.println(num1 % num2);
+		
+
+	}
+
+}
