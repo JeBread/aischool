@@ -3,3 +3,5 @@
 
 git global user.name 'JeBread'
 git global user.email 'sangje112@gmail.com'
+
+Java , DataBase 수업중
