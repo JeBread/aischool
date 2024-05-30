@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Ex00자판기프로그램 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("1~12월 중 숫자 하나를 입력하세요 : ");
+		int month = sc.nextInt();
+
+	}
+
+}

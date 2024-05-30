@@ -1,0 +1,19 @@
+package switch_case문;
+
+public class Ex01switch문 {
+
+	public static void main(String[] args) {
+		
+//		switch (변수) {
+//		case 값1 :
+//			변수랑 값1이 같으면 실행할 코드
+//			break; switch-case 문을 빠져나가는 키워드
+//		case 값2 :
+//			변수랑 값2가 같으면 실행할 코드
+//		}
+
+		int num = 5;
+		
+	}
+
+}

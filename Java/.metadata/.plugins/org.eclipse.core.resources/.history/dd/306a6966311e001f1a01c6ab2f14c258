@@ -1,0 +1,34 @@
+package elseif문;
+
+import java.util.Scanner;
+
+public class Ex03elseif문 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("1과목 : ");
+		int a = sc.nextInt();
+		System.out.print("2과목 : ");
+		int b = sc.nextInt();
+		System.out.print("3과목 : ");
+		int c = sc.nextInt();
+		System.out.print("4과목 : ");
+		int d = sc.nextInt();
+		System.out.print("5과목 : ");
+		int e = sc.nextInt();
+		
+		if (a < 8 || b < 8 || c < 8 || d < 8 || e < 8) {
+			System.out.println("불합격입니다."); 
+		} else if (a+b+c+d+e >= 60) {
+			System.out.println("합격입니다.");
+		} else {
+			System.out.println("불합격입니다.");
+		}
+		
+		
+		
+	}
+
+}

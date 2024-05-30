@@ -1,0 +1,27 @@
+package if_else문;
+
+import java.util.Scanner;
+
+public class Ex01if_else문 {
+
+	public static void main(String[] args) {
+		
+		// if-else문
+		// 조건식의 참/거짓에 대한 실행코드
+		
+		// if (조건식) {
+		// 조건식이 true 일 때 실행할 코드
+		// } else {
+		// false 일 때 실행할 코드
+		// }
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자를 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		
+		
+
+	}
+
+}
