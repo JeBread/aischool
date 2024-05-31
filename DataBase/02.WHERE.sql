@@ -115,6 +115,37 @@ select first_name, hire_date
 from employees
 where hire_date like '05%';
 
+-- LIKE 연산자
+-- 일부 문자열이 포함된 데이터를 조회할 때 사용.
+-- %, _ 라는 와일드 카드를 이용해서 매칭연산 진행.
+
+-- % : 길이와 상관없이 모든 문자 데이터
+-- _ : 어떤 값이든 상관 없이 한 개의 문자 데이터
+
+-- 실습)
+select first_name, phone_number
+from employees
+where phone_number LIKE '650%';
+
+--1.
+select first_name
+from employees
+where first_name LIKE 'S%n';
+
+--2. it로 이름끝나는 4글자 직원
+select first_name
+from employees
+where first_name LIKE '__it';
+
+--3. 두번째 글자 e인 직원
+select first_name
+from employees
+where first_name LIKE '_e%';
+
+--4. 1월 입사 직원
+select first_name, hire_date
+from employees
+where hire_date like '___01___';
 
 
 
