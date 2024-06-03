@@ -1,0 +1,16 @@
+package while문;
+
+import java.util.Random;
+
+public class Ex09예제 {
+
+	public static void main(String[] args) {
+		
+		// 랜덤으로 숫자를 가져와주는 기능
+		Random rd = new Random();
+		
+		
+
+	}
+
+}

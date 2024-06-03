@@ -1,0 +1,36 @@
+package while문;
+
+import java.util.Scanner;
+
+public class Ex07예제 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		// 숫자, 문자한개(char)의 같다를 비교할때
+		// :==
+		
+		// 문자열이 같다를 비교할 때는
+		// equals()
+		
+		String name = "방상제";
+		if (name.equals("방상제")) {
+			System.out.println("로그인성공");
+		}
+		
+		while (true) {
+		System.out.print("아이디 입력 : ");
+		String id = sc.next();
+		System.out.print("비밀번호 입력");
+		String pw = sc.next();
+		
+		if (id.equals("Hello") && pw.equals("1234")) {
+			System.out.println("로그인 성공!");
+			break;
+		}
+		
+		}
+
+	}
+
+}
