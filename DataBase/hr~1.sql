@@ -116,7 +116,7 @@ having COUNT(*) >= 3;
 
 -- ½Ç½À)
 select * from employees;
-select department_id, max(salary*12)
+select department_id, max(salary*12) as ¿¬ºÀ
 from employees
 group by department_id
 having max(salary*12) >= 100000
