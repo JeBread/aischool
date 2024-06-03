@@ -177,6 +177,23 @@ from employees;
 select employee_id, first_name, manager_id ,NVL2(manager_id, '직원', '대표')
 from employees;
 
+-- 조건 함수
+-- DECODE() : 상황에 따라 다른 데이터를 반환하는 함수.
+-- 검사 대상과 비교해서 지정한 값 반환
+
+-- DECODE(검사대상 컬럼 or 데이터 <1 기준값> , 비교값<2> , 일치 시 반환할 값 <3>, 
+-- 일치하지 않을 때 반환값<마지막>) 
+
+select first_name, department_id,
+decode(department_id, NULL, '부서없음', 90, '부서90', '부서있음')
+from employees;
+
+-- 실습) 직원id, first_name, manager_id 출력. 매니저 없으면 '대표' 있으면 '직원'
+select employee_id, first_name, manager_id,
+decode (manager_id, NULL, '대표', '직원')
+from employees;
+
+
 
 
 
