@@ -1,0 +1,10 @@
+package 일차원배열;
+
+public class Ex01배열개념 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
