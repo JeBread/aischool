@@ -1,0 +1,12 @@
+package 일차원배열;
+
+public class Ex06배열 {
+
+	public static void main(String[] args) {
+		int[] arr = new int [5];
+		for (int i : arr) {
+			System.out.print(i);
+		}
+	}
+
+}

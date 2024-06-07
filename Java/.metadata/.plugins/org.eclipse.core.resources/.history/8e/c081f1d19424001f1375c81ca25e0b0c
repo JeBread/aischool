@@ -1,0 +1,15 @@
+package 일차원배열;
+
+import java.util.Scanner;
+
+public class Ex08배열 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int[] arr = {1, 4, 3, 2, 1};
+		System.out.println(arr[0]);
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package 일차원배열;
+
+import java.util.Scanner;
+
+public class Ex09배열 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		String[] id_list = new String[10];
+		String[] pw_list = new String[10];
+		
+		String[] user_id = new String[10];
+		String[] user_pw = new String[10];
+		
+		while (true) {
+			System.out.print("[1]회원가입 [2]로그인 [3]종료 >> ");
+			int select = sc.nextInt();
+			if (select == 1) {
+				System.out.println("==회원가입==");
+				System.out.print("ID 입력 >> ");
+				id_list[0] = sc.next();
+				System.out.print("PW 입력 >> ");
+				pw_list[0] = sc.next();
+				
+			} else if (select == 2) {
+				System.out.println("==로그인==");
+				System.out.print("ID 입력 >> ");
+				user_id[0] = sc.next();
+				System.out.print("PW 입력 >> ");
+				user_pw[0] = sc.next();
+				
+			} else {
+				System.out.println("프로그램이 종료되었습니다.");
+				break;
+			}
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}
