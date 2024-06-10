@@ -1,0 +1,21 @@
+package 이차원배열;
+
+public class Ex05이차원배열 {
+
+	public static void main(String[] args) {
+		
+		int[]point = {92, 32, 52, 9, 81, 2, 68};
+		
+		int minV = 100;
+		for (int i: point) {
+			for (int j: point) {
+				if (i != j) {
+					if ( Math.abs(i - j) < minV) {
+						minV = Math.abs(i - j);
+					}
+				}
+			}
+		}
+	}
+
+}
