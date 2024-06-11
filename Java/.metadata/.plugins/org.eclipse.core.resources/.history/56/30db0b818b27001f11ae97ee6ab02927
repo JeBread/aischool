@@ -1,0 +1,16 @@
+package 메서드;
+
+public class Ex01메o리o {
+	
+	public static int minus(int a, int b) {
+		return a - b;
+	}
+
+	public static void main(String[] args) {
+		System.out.print(minus(9, 7));
+	}
+
+	// main 밖 - 메서드 정의
+	// - 클래스 내/외부에서 자유로운 접근을 할 수 있도록 도와주는 제한자
+	// private, protected, default
+}

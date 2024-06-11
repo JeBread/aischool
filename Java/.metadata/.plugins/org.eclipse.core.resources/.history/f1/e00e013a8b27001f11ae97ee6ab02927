@@ -1,0 +1,14 @@
+package 메서드;
+
+public class Ex01메o리o {
+	
+	public static int minus(int a, int b) {
+		return a - b;
+	}
+
+	public static void main(String[] args) {
+		minus(7, 9);
+
+	}
+
+}

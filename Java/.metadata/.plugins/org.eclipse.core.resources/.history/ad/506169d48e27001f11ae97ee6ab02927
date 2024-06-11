@@ -1,0 +1,16 @@
+package 메서드;
+
+public class Ex02매o리x {
+	
+	
+	public static void shit() {
+		System.out.println("으악");
+	}
+
+	public static void main(String[] args) {
+		shit();
+		
+
+	}
+
+}

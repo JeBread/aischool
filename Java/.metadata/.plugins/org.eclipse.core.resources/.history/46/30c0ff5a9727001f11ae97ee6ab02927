@@ -1,0 +1,28 @@
+package 메서드;
+
+public class Ex06메서드실습 {
+	
+	public static int cal(int a, int b, char c) {
+		if (c == '-') {
+			return a - b;
+		} else if (c == '+') {
+			return a + b;
+		} else if (c == '*') {
+			return a * b;
+		} else {
+			return a / b;
+		}
+		
+
+	}
+
+	public static void main(String[] args) {
+		int num1 = 5;
+		int num2 = 2;
+		char op = '-';
+		
+		System.out.print(cal(num1, num2, op));
+
+	}
+
+}

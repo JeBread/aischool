@@ -1,0 +1,31 @@
+package 메서드;
+
+public class Ex08완전수구하기 {
+	
+	public static boolean isDivisor(int num1, int num2) {
+		if (num1 % num2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	
+	public static int asd() {
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		
+		// 여기에 앞으로 나오는 모든 메서드 문제 풀기
+		// 1) isDivisor() : 약수인지 아닌지 확인해주는 메서드
+		int num1 = 10;
+		int num2 = 2;
+		boolean divisor = isDivisor(num1, num2);
+		System.out.println(divisor);
+
+	}
+	
+	
+
+}
