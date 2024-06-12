@@ -4,4 +4,5 @@
 git global user.name 'JeBread'
 git global user.email 'sangje112@gmail.com'
 
-Java , DB 수업중
+DB 수업완료
+Java, CSS 수업중
