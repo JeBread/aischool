@@ -1,0 +1,25 @@
+package 저금통;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// 1) PiggyBank 설계도 사용해서 객체생성
+		PiggyBank pig = new PiggyBank(10000);
+		
+		// 2) money = 10000
+		pig.getMoney();
+		
+		// 3) 돈 넣기 5000원
+		pig.deposit(5000);
+		// 4) 잔액확인 15000원
+		pig.showMoney();
+		
+		// 5) 돈 인출하기 1200원
+		pig.withdraw(1200);
+		// 6) 잔액확인 13800원
+		pig.showMoney();
+
+	}
+
+}

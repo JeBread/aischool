@@ -1,0 +1,17 @@
+package 저금통;
+
+public class PiggyBank {
+	
+	int money;
+	
+	public void deposit() {
+		
+	};
+	public void withdraw() {
+		
+	};
+	public void showMoney() {
+		
+	};
+	
+}

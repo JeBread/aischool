@@ -1,0 +1,9 @@
+package Person;
+
+public class Person {
+	
+	// 설계도에 해당하는 곳
+	// Class == 설계도
+	
+
+}

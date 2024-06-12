@@ -1,0 +1,23 @@
+package 저금통;
+
+public class PiggyBank {
+	
+	private int money;
+	// private : 필드를 클래스 외부에서 접근할 수 없도록 도와주는 제한자
+	
+	public int deposit(int num) {
+		// 돈을 넣는다.
+		money += num;
+		return money;
+	};
+	public int withdraw(int num) {
+		// 돈을 인출한다.
+		money -= num;
+		return money;
+	};
+	public void showMoney() {
+		// 잔액을 보여준다.
+		System.out.println("현재 잔액은 " + money + "원 입니다.");
+	};
+	
+}

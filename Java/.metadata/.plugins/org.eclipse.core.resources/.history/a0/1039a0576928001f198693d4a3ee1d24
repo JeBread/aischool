@@ -1,0 +1,17 @@
+package 저금통;
+
+public class PiggyBank {
+	
+	int money;
+	
+	public void deposit() {
+		// 돈을 넣는다.
+	};
+	public void withdraw() {
+		// 돈을 인출한다.
+	};
+	public void showMoney() {
+		잔액을 보여준다.
+	};
+	
+}

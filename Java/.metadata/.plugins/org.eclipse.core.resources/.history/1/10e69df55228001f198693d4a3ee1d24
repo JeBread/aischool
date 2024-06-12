@@ -1,0 +1,15 @@
+package 메서드;
+
+public class Ex09Overloading {
+	
+	public static void asd() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

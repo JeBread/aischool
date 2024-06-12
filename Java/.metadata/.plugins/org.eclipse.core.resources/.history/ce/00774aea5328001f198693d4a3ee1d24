@@ -1,0 +1,28 @@
+package 메서드;
+
+public class Ex09Overloading {
+
+	public static void main(String[] args) {
+		
+		// 한국인 이름을 데이터베이스에 저장하는 메서드 :
+		// stName(성, 이름)
+		stName("방","상제");
+		stName("스티브","폴","잡스");
+		
+		// 오버로딩 사용하는 이유
+		// 같은 기능을 하는 메서드들이 서로 다른 이름을 가지고 있으면 불편.
+		// if문으로 구분할 필요가 없어 코드의 길이가 줄어든다.
+
+	}
+	
+	public static void stName(String firstName, String lastName) {
+		// 데이터베이스에 이름 저장
+		
+	}
+	
+	public static void stName(String firstName, String middleName, String lastName) {
+		// 데이터베이스에 이름 저장
+		
+	}
+
+}
