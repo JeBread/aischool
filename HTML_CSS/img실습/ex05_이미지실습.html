@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="display: flex;">
+    <!-- 1. img1 불러오기 현재위치 기준 -->
+    <div>
+      <h3>동글이1</h3>
+      <img src="image1.jpg" style="height: 267px;" alt="이미지1">
+    </div>
+    <!-- 2. img2 불러오기 (폴더 나가서 img 폴더에 접근)  -->
+    <div>
+      <h3>동글이2</h3>
+      <img src="../Image/image2.jpeg" style="width: 200px;" alt="이미지2">
+    </div>
+    <!-- 3. img3 불러오기 (루트기준 경로 작성)-->
+    <div>
+      <h3>기아 타이거즈</h3>
+      <img src="/Image/image3.png" style="width: 200px; height: 267px;" alt="이미지3">
+    </div>
+  </div>
+</body>
+</html>
