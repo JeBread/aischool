@@ -1,0 +1,18 @@
+package MusicPlayer;
+
+public class Music {
+	
+	// 필드
+	
+	String singer;
+	String title;
+	int playTime;
+	String path;
+	
+	// 생성자 4개의 매개변수
+	
+	
+	// getter 4개
+	
+
+}

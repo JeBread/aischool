@@ -1,0 +1,36 @@
+package MusicPlayer;
+
+public class Music {
+	
+	// 필드
+	String singer;
+	String title;
+	int playTime;
+	String path;
+	
+	// 생성자 4개의 매개변수
+	public Music(String singer, String title, int playTime, String path) {
+		super();
+		this.singer = singer;
+		this.title = title;
+		this.playTime = playTime;
+		this.path = path;
+	}
+	
+	// getter 4개
+	
+	public String getSinger() {
+		return singer;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public int getPlayTime() {
+		return playTime;
+	}
+	public String getPath() {
+		return path;
+	}
+	
+
+}

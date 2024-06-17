@@ -1,0 +1,57 @@
+package ArrayList기초;
+
+import java.util.ArrayList;
+
+public class Ex01ArrayList {
+
+	public static void main(String[] args) {
+		
+		// 가변배열 ArrayList
+		// 데이터의 개수에 따라서 크기가 늘어났다 줄어들었다 할 수 있는 배열
+		
+		// 1) 가변배열을 선언 및 생성
+		ArrayList<String> list = new ArrayList<>();
+		
+		// 2) 데이터를 추가하는 기능
+		// - add(String str)
+		list.add("조자연");
+		list.add("최영화");
+		list.add("박병관");
+		
+		// - add(int index, String str)
+		list.add(1, "이도연");
+		
+		// 3) 데이터를 확인하는 방법(가져오는 방법)
+		// -get(int index)
+		list.get(1);
+		System.out.println(list.get(0));
+		System.out.println(list);
+		
+		// get에 들어있는 index 값은 변수로 사용될 수 있다.
+		// 순차적인 접근 가능
+		
+		// list.size() : ArrayList의 크기 값을 결과로 돌려주는 메서드
+		for(int i = 0; i < list.size(); i++) {
+			System.out.print(list.get(i) + " ");
+		}
+		System.out.println();
+		for (String x:list) {
+			System.out.print(x + " ");
+		}
+		System.out.println();
+		// 4. 데이터를 삭제하는 기능
+		list.remove(0);
+		System.out.println(list);
+		
+		// 5. 모든 데이터를 삭제하는 기능
+		// - clear()
+		list.clear();
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package MusicPlayer;
+
+public class Music {
+	
+	// 필드
+	
+	String singer;
+	String title;
+	int playTime;
+	String path;
+
+}

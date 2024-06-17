@@ -1,0 +1,19 @@
+package ArrayList기초;
+
+import java.util.ArrayList;
+
+public class Ex01ArrayList {
+
+	public static void main(String[] args) {
+		
+		// 가변배열 ArrayList
+		// 데이터의 개수에 따라서 크기가 늘어났다 줄어들었다 할 수 있는 배열
+		
+		// 1) 가변배열을 선언 및 생성
+		ArrayList<String> list = new ArrayList<>();
+		list.add("asd");
+		System.out.println(list);
+
+	}
+
+}

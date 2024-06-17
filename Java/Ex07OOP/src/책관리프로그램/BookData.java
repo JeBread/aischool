@@ -6,6 +6,8 @@ public class BookData {
    private int price;
    private String writer;
    
+   // alt + shift + s 단축키
+   
    public BookData(String title, int price, String writer) {
       this.title = title;
       this.price = price;

@@ -1,0 +1,12 @@
+package ArrayList기초;
+
+public class Ex01ArrayList {
+
+	public static void main(String[] args) {
+		
+		// 가변배열 ArrayList
+		// 데이터의 개수에 따라서 크기가 늘어났다 줄어들었다 할 수 있는 배열
+
+	}
+
+}
