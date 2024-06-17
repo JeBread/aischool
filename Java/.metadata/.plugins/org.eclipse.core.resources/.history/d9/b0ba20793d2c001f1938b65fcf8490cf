@@ -1,0 +1,5 @@
+package 학생정보관리프로그램;
+
+public class Student {
+
+}
