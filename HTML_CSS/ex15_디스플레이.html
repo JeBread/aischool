@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    *{
+      font-family: Pretendard;
+      font-size: x-large;
+    }
+
+    div {
+      margin: 10px;
+    }
+
+    /* 가시속성 (display)
+    1. block : 가로폭 전체를 차지하는 속성 (h태그, p태그, div태그)
+    2. inline : 내용의 크기만큼만 차지하는 속성 (span태그, a태그)
+    3. none 요소 -> 화면상에서 태그가 보이지 않도록하고 싶을 때 사용
+    */
+
+    span {
+      display: none;
+    }
+
+    a:hover + span {
+      display: inline;
+    }
+
+    p {
+      display: none;
+    }
+
+    a:hover ~ p {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <a href="https://www.naver.com" target="_blank">네이버</a>
+    <span>https://www.naver.com</span>
+  </div>
+  <div>
+    <a href="https://www.daum.net" target="_blank">다음</a>
+    <span>https://www.daum.net</span>
+  </div>
+</body>
+</html>

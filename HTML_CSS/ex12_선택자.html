@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 선택자 정리
+    1. 그룹선택자 : 여러 개의 태그에 동일한 스타일을 적용
+    2. 전체선택자(*): html 파일 전체 태그
+      <특정 태그들에게 고유한 이름을 지정하여 디자인을 줄 때 >
+    3. 클래스 선택자: 특정 태그들에게 고유한 이름을 지정하여 디자인을 줄 때 
+    4. id 선택자 : 특정 태그에게 고유한 이름을 지정하여 디자인을 줄 때
+      - 차이점 : 클래스 선택자는 중복 가능, id 선택자는 중복 불가능
+      - 주의점 : 아이디를 부여한 태그에도 클래스 부여 가능. ( 단, 우선순위가 존재 )
+      - 우선순위 : id > class > 태그
+    */
+
+    /* h1, h2, h3 {
+      color: blue;
+    } */
+
+    *{
+      color : #0064ff;
+      font-family: Pretendard;
+    }
+
+    .male {
+      color: #202632;
+    }
+
+    #yh {
+      color: rgb(238, 56, 238);
+    }
+
+    
+
+    
+  </style>
+</head>
+<body>
+  <div>
+    <h1 class="female" id="yh">최영화</h1>
+    <h1 class="male">박병관</h1>
+    <h1 class="male">황해도</h1>
+
+    <h2 class="male">Java</h2>
+    <h2 class="male">DB</h2>
+    <h2>HTML/CSS</h2>
+
+    <h3>웹2B</h3>
+
+  </div>
+</body>
+</html>

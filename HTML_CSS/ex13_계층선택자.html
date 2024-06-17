@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 계층 선택자
+    태그에 아이디, 클래스와 같은 구분자가 없는 경우 포함관계를 이용하여 스타일을 적용
+    1) 부모, 자식관계 -> 특정 태그가 다른 태그를 포함한 경우
+    - 자식선택자(>), 자손선택자(공백)
+    2) 형제관계 -> 같은 부모를 가진 태그들 사이의 관계
+    - 인접형제(+) : 나를 기준으로 내 바로 다음 형제
+    - 후행형제(~) : 나를 기준으로 나보다 뒤에 있는 모든 형제
+    */
+
+    *{  
+      color: #202632;
+      font-family: Pretendard;
+    }
+
+    li {
+      color: red;
+    }
+
+    ul > li {
+      color: #0064ff;
+      font-size: large;
+    }
+
+    li > span {
+      color: green;
+    }
+
+    ol > li > span {
+      color: orange;
+    }
+
+    h1 + p {
+      color: blueviolet;
+    }
+
+    p + p {
+      color: orange;
+    }
+
+    ul > li:nth-child(3) {
+      color: black;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div>
+
+    <h1>여기는 h1 태그</h1>
+    <p>여기는 p태그1</p>
+    <p>여기는 p태그2</p>
+    <ul>
+      <li>li태그 1</li>
+      <li>li태그 2</li>
+      <li>
+        <span>span 태그입니다</span>
+      </li>
+    </ul>
+    <ol>
+      <li>li태그 3</li>
+      <li>li태그 4</li>
+      <li>
+        <span>span 태그입니다</span>
+      </li>
+    </ol>
+
+  </div>
+  
+</body>
+</html>
