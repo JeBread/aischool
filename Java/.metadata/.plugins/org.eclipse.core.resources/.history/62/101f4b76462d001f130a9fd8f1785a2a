@@ -1,0 +1,31 @@
+package 마우스;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// BallMouse
+		BallMouse mouse1 = new BallMouse();
+		mouse1.drag();
+		mouse1.leftClick();
+		mouse1.rightClick();
+		
+		WheelMouse mouse2 = new WheelMouse();
+		mouse2.drag();
+		mouse2.leftClick();
+		mouse2.rightClick();
+		mouse2.scroll();
+		
+		// 상속
+		// 기존의 클래스의 변수/메서드를 물려받아
+		// 새로운 클래스를 구성하는 것
+		
+		// 기존 클래스 : 부모 클래스, 수퍼 클래스
+		// 새로운 클래스 : 자식 클래스, 서브 클래스
+		
+		// 부모 <--- 자식
+		
+		
+	}
+
+}

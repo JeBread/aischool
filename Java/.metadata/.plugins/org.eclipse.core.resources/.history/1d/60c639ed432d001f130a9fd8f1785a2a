@@ -1,0 +1,11 @@
+package 마우스;
+
+public class BallMouse {
+	// 좌클릭
+	public void leftClick() {
+		System.out.println("좌클릭 따닥");
+	}
+	// 우클릭
+	
+	// 드래그
+}

@@ -1,0 +1,15 @@
+package 마우스;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// BallMouse
+		BallMouse mouse1 = new BallMouse();
+		mouse1.drag();
+		mouse1.leftClick();
+		mouse1.rightClick();
+		
+	}
+
+}

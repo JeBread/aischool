@@ -1,0 +1,18 @@
+package MusicPlayer;
+
+import javazoom.jl.player.MP3Player;
+
+public class Controller {
+	
+	MP3Player mp3 = new MP3Player();
+	
+	// 노래가 재생중인지 아닌지 확인 후 노래 멈추는 기능
+	// - musicStop() : void
+	public void musicStop() {
+		
+		if (mp3.isPlaying()) {
+			mp3.stop();
+		}
+	}
+
+}

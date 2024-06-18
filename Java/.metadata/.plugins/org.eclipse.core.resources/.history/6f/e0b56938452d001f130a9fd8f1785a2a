@@ -1,0 +1,24 @@
+package 마우스;
+
+public class WheelMouse {
+	
+	// extends(확장하다)
+	// class 자식클래스명 extends 부모클래스명
+	
+	// 우클릭
+	public void rightClick() {
+		System.out.println("우클릭 따닥");
+	}
+	// 좌클릭
+	public void leftClick() {
+		System.out.println("좌클릭 따닥");
+	}
+	// 드래그
+	public void drag() {
+		System.out.println("드래그하기");
+	}
+	// 스크롤 (휠마우스만 가진 기능)
+	public void scroll() {
+		System.out.println("스크롤하기");
+	}
+}

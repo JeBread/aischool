@@ -1,0 +1,13 @@
+package 마우스;
+
+public class WheelMouse {
+	
+	// 우클릭
+	
+	// 좌클릭
+	
+	// 드래그
+	
+	// 스크롤 (휠마우스만 가진 기능)
+	
+}
