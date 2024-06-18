@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 테두리를 동그랗게 만드는 방법  */
+    #div1 {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 24px;
+      /* 테두리를 깎아주는 역할. 가로,세로만큼 크기를 잘라내주는 역할
+      - 원을 만들려면 가로 세로의 절반을 깎아야 함. 50%로 하면 항상 원. */
+      box-shadow: 5px 5px 7px gray;
+    }
+
+    #div2 {
+      margin-top: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: #0064ff;
+      border-top-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      box-shadow: 5px 5px 7px gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">
+  </div>
+  <div id="div2">
+  </div>
+</body>
+</html>

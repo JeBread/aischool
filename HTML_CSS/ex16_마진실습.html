@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  *{
+    font-family: Pretendard;
+  }
+  /* 박스모델 -> 생성하는 태그의 차지하는 공간이 네모모양
+  1) 바깥쪽 여백 (margin)
+    - 태그의 바깥쪽 공백을 추가할 때 사용하는 속성
+    - 공백이 생성되면 그 공간은 죽는 공간 ( 다른 태그가 사용 불가한 공간 )
+    - 마진 값 1개 -> 상하좌우 모두 적용
+    - 마진 값 2개 -> 상하, 좌우 적용
+    - 마진 값 3개 -> 상, 좌우, 하 적용
+    - 마진 값 4개 -> 상, 우, 하, 좌 적용
+    - auto : 브라우저가 알아서 여백을 설정 ( 가로로 가운데 정렬 )
+  2) 테두리 (border)
+  3) 안쪽 여백 (padding)
+    - 태그의 안쪽 공백을 추가할 때 사용하는 속성
+    - 안쪽의 여백을 증가시키기 때문에 시각적으로 태그의 크기가 커짐
+    - 패딩 값 1개 -> 상하좌우 모두 적용
+    - 패딩 값 2개 -> 상하, 좌우 적용
+    - 패딩 값 3개 -> 상, 좌우, 하 적용
+    - 패딩 값 4개 -> 상, 우, 하, 좌 적용
+  4) 내용 (content)
+  */
+
+  #div1 {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 24px;
+    margin: 50px;
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 7px gray;
+    
+  }
+
+  #div2 {
+    background-color: #0064ff;
+    width: 200px;
+    height: 200px;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 5px 5px 7px gray;
+    /* box-sizing: border-box;  */
+    /* 패딩은 공백을 증가시키는 과정인데 콘텐츠의 전체 크기가 커지기 때문에
+    border-box는 합쳐서 원래의 원했던 크기로 조정해주는 역할
+    -> 콘텐츠의 크기가 작아짐
+     */
+    /* border-box란 ?
+    border-box는 박스의 크기를 계산할 때 패딩과 테두리를 포함해서 계산하는 속성
+    -> 패딩과 테두리가 늘어나도 박스의 크기는 변하지 않음
+    */
+  
+  }
+
+</style>
+
+</head>
+<body>
+  
+  <div id="div1">
+    
+  </div>
+  <div id="div2">
+
+  </div>
+
+</body>
+</html>

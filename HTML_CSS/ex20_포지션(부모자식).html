@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #parentDiv {
+      width: 500px;
+      height: 500px;
+      background-color: #202632;
+      position: relative;
+    }
+
+    #childDiv {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      position: absolute;
+      top: 30px;
+    }
+    /* 자식에 absolute 속성을 주면 부모에게서 벗어나게 된다.
+    부모, 자식은 포함관계여야하는데 포함관계를 어긋나게 한다.
+    부모, 자식 포함 관계에서는 속성을 주고싶으면 부모에게 relative 사용하기 */
+
+  </style>
+</head>
+<body>
+  <br><br><br><br><br><br><br><br><br><br>
+  <div id="parentDiv">
+    <div id="childDiv">
+    </div>
+  </div>
+  
+</body>
+</html>

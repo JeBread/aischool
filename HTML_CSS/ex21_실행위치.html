@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      font-family: Pretendard;
+    }
+    /* CSS 코드 실행위치 (내부, 외부, 인라인) 
+    1. 내부방식 -> html 코드 안에 style 태그 생성하여 css 작성
+    - 단점 : 코드가 노출되어 있어서 보안에 취약. 재사용성이 떨어짐. 코드의 가독성이 떨어진다.
+    
+    2. 인라인 방식 -> 태그 안에 직접 style 속성을 사용하여 css 작성
+    - 단점 : 재사용성이 떨어진다. 코드의 양이 증가
+
+    3. 외부 방식
+    - html과 css 파일을 별도로 생성하여 구분 후 개발 ( 파일 분리 )
+    - 장점 : 코드가 노출되지 않음. 재사용성이 높아짐. 코드의 가독성이 높아짐.
+    */
+    h1 {
+      color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <h1>html 마지막 시간입니다 (내부방식)</h1>
+  <h2 style="color: #0064ff;">여러분 그동안 즐거웠나요? (인라인방식)</h2>
+  <h3>네 (외부방식)</h3>
+  
+</body>
+</html>

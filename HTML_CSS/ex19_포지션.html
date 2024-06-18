@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* position
+    태그의 위치를 변경할 수 있는 속성
+    1. static: 기본값. 위치를 변경할 수 없음. 순서대로 배치.
+    2. relative: 위치를 변경할 수 있음. 원래 있던 자리를 기준으로 이동. 특정 태그에게 새로운 층을 부여해 위치를 이동.
+    3. absolute: 위치를 변경할 수 있음. 부모 태그를 기준으로 이동
+    4. fixed: 위치를 변경할 수 있음. 브라우저를 기준으로 이동. 화면 특정 부분에 고정.
+    5. sticky: 스크롤을 내렸을 때 특정 위치에 고정시킬 수 있음
+    */
+    div {
+      width: 150px;
+      height: 150px;
+    }
+    #div1 {
+      background-color: red;
+      /* margin-top: 200px; 
+      빨간박스를 내려서 밑에 박스에 겹치게 할 수 있을까 ? -> 마진은 전체 콘텐츠 자체가 움직임
+      어떻게 해야할까 ? -> position을 사용하면 됨. */
+
+    }
+    #div2 {
+      background-color: #0064ff;
+      position: relative;
+      top: 75px;
+      left: 50px;
+    }
+    #div3 {
+      background-color: #202632;
+      /* position: sticky; */
+    }
+    #div4 {
+      background-color: green;
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="div1"></div>
+  <div id="div2"></div>
+  <div id="div3"></div>
+  <div id="div4"></div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+</body>
+</html>
