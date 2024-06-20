@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+    table, td {
+      border: 1px solid black;
+    }
+    .sub {
+      background-color: rgba(210, 206, 206, 0.808);
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    let number = prompt("과목 수 입력");
+    let subjects = []
+    for (let i = 0; i < number; i++) {
+      subjects.push(prompt("과목 이름 입력"))
+    }
+    let scores = []
+    for (let i = 0; i < number; i++) {
+      scores.push(parseInt(prompt(subjects[i] + " 점수 입력")))
+    }
+    let sum = 0
+    for (sc of scores) {
+      sum += sc
+    }
+    let avg = parseInt(sum / number)
+
+    let table = `
+    <table>
+      <tr class='sub'>`
+      for (sub of subjects) {
+        table += `<td> ${sub} </td>`
+      }
+        table += `
+        <td>총합</td>
+        <td>평균</td>
+      </tr>
+      <tr>`
+      for (sc of scores) {
+        table += `<td> ${sc} </td>`
+      }
+        table += `
+        <td>${sum}</td>
+        <td>${avg}</td>
+      </tr>
+      </table>`
+
+    document.write(table)
+
+  </script>
+</body>
+</html>

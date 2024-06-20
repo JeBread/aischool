@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>intro</title>
+    </head>
+    <body>
+        <button>change!</button>
+        <h3>Static</h3>
+        1+1
+        <h3>Dynamic</h3>
+
+        <!-- JS문법 시작, body끝태그 위에 작성 -->
+        <script>
+            document.write(1+1);
+
+            document
+            .querySelector('button')
+            .addEventListener('click', ()=>{
+                document
+                .querySelector('body')
+                .style.backgroundColor = 'pink';
+            })
+        </script>
+    </body>
+</html>
