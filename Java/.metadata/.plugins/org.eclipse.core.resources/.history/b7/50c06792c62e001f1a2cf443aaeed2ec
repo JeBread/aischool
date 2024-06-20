@@ -1,0 +1,17 @@
+package 월급관리프로그램;
+
+public class TempEmployee {
+	
+	String empno;
+	String name;
+	int pay;
+	public TempEmployee(String empno, String name, int pay) {
+//		super();
+		this.empno = empno;
+		this.name = name;
+		this.pay = pay;
+	}
+	
+	
+	
+}

@@ -1,0 +1,6 @@
+package JDBC기초;
+
+public class Ex02Update {
+	public static void main(String[] args) {
+	}
+}

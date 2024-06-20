@@ -1,0 +1,9 @@
+package 월급관리프로그램;
+
+public class PartTimeEmployee {
+
+	String empno;
+	String name;
+	int pay; // 일당
+	
+}

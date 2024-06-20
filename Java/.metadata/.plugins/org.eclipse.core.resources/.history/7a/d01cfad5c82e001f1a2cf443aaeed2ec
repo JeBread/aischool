@@ -1,0 +1,30 @@
+package 월급관리프로그램;
+
+public class RegularEmployee extends Employee{
+
+//   String empno;
+//   String name;
+//   int pay;    extends 하면서 없애도 되는 중복되는 부분들
+   int bonus;
+   
+   
+   public RegularEmployee(String empno, String name, int pay, int bonus) {
+      // super();
+      this.empno = empno;
+      this.name = name;
+      this.pay = pay;
+      this.bonus = bonus;
+   }
+   
+   // 월급여를 결과로 돌려주는 메서드  -> 상속하고 있어서 없애도 됨
+//   public int getMoneyPay() {
+//      return (pay+bonus)/12;
+//   }
+   // 사원의 정보를 결과값으로 돌려주는 메서드 -> 상속하고 있어서 없애도 됨
+//   public String print() {
+//      return empno+":"+name+":"+pay;
+//   }
+
+   
+   
+}

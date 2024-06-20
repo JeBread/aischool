@@ -1,0 +1,13 @@
+package 월급관리프로그램;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// RegularEmployee 생성자를 이용해서 객체 regular
+		RegularEmployee regular 
+		= new RegularEmployee("SMHRD001", "홍길동", 4000, 400);
+
+	}
+
+}

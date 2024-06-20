@@ -1,0 +1,9 @@
+package 월급관리프로그램;
+
+public class TempEmployee {
+	
+	String empno;
+	String name;
+	int pay;
+	
+}
