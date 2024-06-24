@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+    <h1>클릭을 통해서 태그 생성</h1>
+    <button onclick="h1()">h1태그 생성</button>
+    <button onclick="a()">a태그 생성</button>
+    <button onclick="ul()">ul태그 생성</button>
+    <button onclick="printText()">테스트용 버튼</button>
+
+    <p id="text">
+
+    </p>
+  </div>
+
+  <script>
+    // 1. h1태그를 클릭하면 alert창이 실행되게 작업
+    const printText = () => {
+      alert("함수가 실행됐습니다!")
+    }
+    // 2. 버튼과 내가 만든 함수를 연결 시켜줘야한다.
+    // 2-1. 버튼 태그 안에 직접 이벤트를 작성해서 명시가 가능 -> 인라인 방식
+    
+    // 실습 프로세스
+    // 1. 총 3개의 함수 제작 (h1, a, ul)
+    // 2. 버튼을 클릭하면 해당 함수가 실행되게 작업
+    // 3. 각각 함수의 로직 -> ex) h1태그 버튼을 누르면 id가 text인 공간에 <h1>태그를 생성
+
+      const h1 = () => {
+        const text = document.getElementById("text");
+        text.innerHTML = "<h1>h1태그 생성</h1>";
+      }
+
+      const a = () => {
+        const text = document.getElementById("text");
+        text.innerHTML = "<a href='#'>a태그 생성</a>";
+      }
+
+      const ul = () => {
+        const text = document.getElementById("text");
+        text.innerHTML = "<ul><li>ul태그 생성</li></ul>";
+      }
+    
+    
+  </script>
+</body>
+</html> 

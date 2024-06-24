@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <div>
+    <h1 id="h1-id" class="h1-class text-3xl font-bold">DOM 요소</h1>
+    <h1 id="h1-id2" class="h1-class">DOM 요소2</h1>
+
+  </div>
+
+  <script>
+    // DOM 객체 -> HTML에서 생성된 모든 태그, 속성, 텍스트를 쪼개서 각각 관리한다.
+    // <h1 id="h1-id" class="h1-class">DOM 요소</h1>
+    // 1. 요소 노드 -> h1태그가 저장
+    // 2. 속성 노드 -> id, class (속성) 저장, h1-id, h1-class (속성값) 저장
+    // 3. 텍스트 노드 -> DOM 요소 (텍스트) 저장
+    // 4. 노드들을 관리하는 최상위 노드 -> document
+    // 쪼개서 관리하는 이유는 ? 원하는 태그에 접근해서 스타일, 이벤트 부여하기 위해서
+
+    // 일반적인 사고
+    // 문서에서 id가 h1-id인 요소를 가져와서 콘솔창에 출력해줘
+    // 1. HTML에서 원하는 요소를 접근할 때는 getElement라는 함수를 사용한다.
+    // * 데이터를 담고 있는 최상위 주체는 document이다.
+
+    let asd = document.getElementById("h1-id")
+    console.log(asd)
+    console.log(asd.id)
+    console.log(asd.innerHTML)
+
+    // 2. 문서에서 클래스가 h1-class인 요소들을 가져와서 출력해 보세요
+    // 클래스는 복수 개를 가질 수 있기 때문에, elements라고 복수개를 요청
+    // 요청을 복수로 했기 때문에, 응답 또한 복수개로 넘어온다.
+    // 배열처럼 데이터가 넘어온다.
+    // 데이터 타입 -> HTMLCollection(유사배열)
+    // 유사배열 -> 배열처럼 쓸 수 있다.(index,length) -> but, 배열 함수는 사용 불가
+    // 혹시 배열 함수를 쓰고 싶은 경우에는 HTML 컬렉션을 배열로 변환
+    let qwe = document.getElementsByClassName("h1-class")
+    console.log(typeof(qwe))
+    console.log(qwe)
+    console.log(qwe[0])
+    console.log(qwe[0].innerHTML)
+    let qweArr = Array.from(qwe)
+    console.log(qweArr)
+    
+  </script>
+</body>
+</html>
