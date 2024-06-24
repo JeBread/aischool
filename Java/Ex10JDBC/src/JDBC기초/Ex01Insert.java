@@ -14,6 +14,8 @@ public class Ex01Insert {
 		// 입력받은 내용이 데이터베이스에 저장될 수 있도록 만들어 주자
 		
 		Scanner sc = new Scanner(System.in);
+		PreparedStatement psmt = null;
+		Connection con = null;
 		
 		System.out.print("이름 : ");
 		String name = sc.next();
@@ -47,7 +49,7 @@ public class Ex01Insert {
 			// 1521 : 포트 번호
 			// xe : oracle DB의 별칭
 			
-			Connection con = DriverManager.getConnection(url, id, pw);
+			con = DriverManager.getConnection(url, id, pw);
 			// DriverManager import 해주기
 			// Connection import
 			
@@ -57,7 +59,7 @@ public class Ex01Insert {
 			String sql = "INSERT INTO STUDENT VALUES(?,?,?,?)";
 			// ?(물음표) : 사용자가 입력한 값인데 아직 사용자가 뭘 입력할지 모르기 때문
 			
-			PreparedStatement psmt = con.prepareStatement(sql);
+			psmt = con.prepareStatement(sql);
 			// import 작업하기
 			// PreparedStatement 객체는 DB로 쿼리문을 가지고 이동하는 객체
 			// ? 를 실제 데이터로 채우는 작업
@@ -78,9 +80,6 @@ public class Ex01Insert {
 				System.out.println("추가 실패");
 			}
 			
-			
-			
-			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("동적 로딩 실패"); // forName 확인
@@ -95,25 +94,33 @@ public class Ex01Insert {
 			
 			// 나의 계정 비밀번호, 아이디 오타 확인
 			// url의 값이 정확한지 오타 확인
+		} finally {
+			// try ~ catch ~ finally
+			// : 예외상황을 처리하는 문법
+			// finally 안쪽에 작성되는 코드는 마지막에 무조건 한 번은 실행되는 코드가 들어온다.
+			
+			// 자원반납이 중간에 에러가 발생해도, try 안에 있는 코드가
+			// 다 실행되더라도 마지막에 꼭 한 번 실행될 수 있도록
+			// => 성공하거나 실패하거나 이후 꼭 한 번 실행되는 코드
+			
+			// close();
+			// 내가 사용했던 자원을 역순으로 닫아줘야한다.
+			// PreparedStatement ---> Connection
+			
+			try {
+				// 사용된 적이 있는 기능만 반납할 수 있도록 if문 추가
+				if (psmt != null)
+					psmt.close();
+				if (con != null)
+					con.close();
+				// 실행코드가 1개면 중괄호 생략
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("자원 반납 오류");
+			}
+			// try문 안쪽에만 psmt가 있었기 때문에 상위 스코프에 psmt 선언.
 		}
-		
-		// try ~ catch ~ finally
-		// : 예외상황을 처리하는 문법
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 
 	}

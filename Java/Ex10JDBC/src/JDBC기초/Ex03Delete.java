@@ -9,7 +9,9 @@ import java.util.Scanner;
 public class Ex03Delete {
 	public static void main(String[] args) {
 		
-Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		PreparedStatement psmt = null;
+		Connection con = null;
 		
 		System.out.print("삭제할 학생의 이름 입력 : ");
 		String name = sc.next();
@@ -24,11 +26,11 @@ Scanner sc = new Scanner(System.in);
 			String pw = "12345";
 			String url = "jdbc:oracle:thin:@localhost:1521:xe"; 
 			
-			Connection con = DriverManager.getConnection(url, id, pw);
+			con = DriverManager.getConnection(url, id, pw);
 
 			String sql = "DELETE FROM STUDENT WHERE NAME = ? AND AGE = ?";
 			
-			PreparedStatement psmt = con.prepareStatement(sql);
+			psmt = con.prepareStatement(sql);
 			
 			psmt.setString(1, stu.getName());
 			psmt.setInt(2, stu.getAge());
@@ -48,6 +50,19 @@ Scanner sc = new Scanner(System.in);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("권한 확인 실패");  // getConnection 확인
+		} finally {
+			try {
+				// 사용된 적이 있는 기능만 반납할 수 있도록 if문 추가
+				if (psmt != null)
+					psmt.close();
+				if (con != null)
+					con.close();
+				// 실행코드가 1개면 중괄호 생략
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("자원 반납 오류");
+			}
 		}
 		
 	}

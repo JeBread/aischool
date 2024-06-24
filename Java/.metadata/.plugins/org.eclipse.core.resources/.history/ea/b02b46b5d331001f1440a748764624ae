@@ -1,0 +1,12 @@
+package 학생정보관리프로그램;
+
+public class Controller {
+
+	// 학생등록을 진행하는 기능 - view에서 입력한 등록할 데이터를 받아주는 역할
+	public void insert(StudentDTO dto) {
+		
+		StudentDAO dao = new StudentDAO();
+		dao.insert();
+	}
+	
+}
