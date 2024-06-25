@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p id="number">0</p>
+    <button onclick="up()">+1 증가</button>
+    <button onclick="down()">-1 감소</button>
+  </div>
+  
+  <script>
+    // 좋은 코드를 작성하는 방법
+    // 1. 가독성이 뛰어나야 함. ( 변수명, 클래스명, 코드 길이 )
+    // 2. 중복되는 코드를 최소화시킨다.
+    // 3. 코드의 재사용성을 높여야한다. -> 공통되는 내용은 변수로 묶어서 사용.
+
+    const number = document.getElementById("number")
+
+    const up = () => {
+      number.innerHTML = parseInt(number.innerHTML) + 1
+    }
+
+    const down = () => {
+      if (parseInt(number.innerHTML) === 0) {
+        alert("0 미만으로 내려갈 수 없습니다. 그만눌러")
+        return
+      }
+      number.innerHTML = parseInt(number.innerHTML) - 1
+    }
+
+    // 이번 실습에서 체크할 점 !
+    // 1. 값이 변동되는 경우에는 반드시 다시 넣어준다라는 개념 잡기
+    // 2. innerHTML, innerText로 받아온 데이터는 무조건 문자 형태 -> 형변환
+    // 3. 코드를 작성할 때는 가독성을 매우 중요하게 생각해라 -> 중복되는 코드는 변수에 담아서 관리
+    // 4. 코드가 많아지는 경우에는 역할이 같은 코드끼리 묶기
+    
+
+
+  </script>
+</body>
+</html>

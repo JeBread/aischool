@@ -10,14 +10,13 @@
       color: #202632;
     }
   </style>
-
 </head>
 <body>
   <div>
     <h1>클릭을 통해서 태그 생성</h1>
-    <button onclick="h1()">h1태그 생성</button>
-    <button onclick="a()">a태그 생성</button>
-    <button onclick="ul()">ul태그 생성</button>
+    <button onclick="setH1()">h1태그 생성</button>
+    <button onclick="setA()">a태그 생성</button>
+    <button onclick="setUl()">ul태그 생성</button>
     <button onclick="printText()">테스트용 버튼</button>
 
     <p id="text">
@@ -38,20 +37,32 @@
     // 2. 버튼을 클릭하면 해당 함수가 실행되게 작업
     // 3. 각각 함수의 로직 -> ex) h1태그 버튼을 누르면 id가 text인 공간에 <h1>태그를 생성
 
-      const h1 = () => {
+      const setH1 = () => {
         const text = document.getElementById("text");
-        text.innerHTML = "<h1>h1태그 생성</h1>";
+        // 버튼 누를때마다 h1태그가 생성되게 작업하는 코드는 ?
+          text.innerHTML += "<h1>h1태그 생성</h1>";
       }
 
-      const a = () => {
+      const setA = () => {
         const text = document.getElementById("text");
-        text.innerHTML = "<a href='#'>a태그 생성</a>";
+        text.innerHTML += "<a href='https://www.google.com' target='_blank'>google.com</a>";
       }
 
-      const ul = () => {
+      const setUl = () => {
         const text = document.getElementById("text");
-        text.innerHTML = "<ul><li>ul태그 생성</li></ul>";
+        text.innerHTML += `
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+        </ul>`;
       }
+
+      // 이번 실습에서 체크할 내용
+      // 1. 함수를 만든 후에는 반드시 태그와 연결시켜줘라
+      // 2. 특정 요소에서 내용을 변경할 때는 innerHTML을 사용
+      // 3. 태그가 많아서 가독성이 떨어지는 경우에는 백틱(``) 탬플릿 리터럴을 사용
+      // 4. 데이터를 누적하고 싶은 경우에는 복합대입연산자(+=)를 사용
     
     
   </script>

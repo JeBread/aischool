@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" id="input-text">
+    <button onclick="printText()">인풋값 출력</button>
+  </div>
+
+  <script>
+    // 버튼을 클릭하면, input 태그 안에 작성된 내용을 alert 창으로 출력
+    const printText = () => {
+      const inputText = document.getElementById("input-text").value
+      alert(inputText)
+    }
+
+    // input 태그에서 데이터를 가지고 오는 방법
+    // 1. input 태그는 열린 태그만 있고 닫는 태그가 없다. -> 컨텐츠가 존재하지 않는다.
+    // 2. input 태그는 데이터를 value라는 공간에 저장
+    // 3. 데이터를 조회할 때는 요소.value로 조회
+  </script>
+</body>
+</html>

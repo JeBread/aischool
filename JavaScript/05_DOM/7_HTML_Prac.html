@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+
+    div {
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" id="text" placeholder="여기에 치거라">
+    <button onclick="printText()">인풋값 h1으로 출력</button>
+    <p id="text-area"></p>
+  </div>
+
+  <script>
+    // 버튼을 클릭 했을 때, input 태그 안의 값을 p 태그에 생성(h1 태그로)
+    const text = document.getElementById("text")
+    const textArea = document.getElementById("text-area")
+
+    const printText = () => {
+      textArea.innerHTML = `<h1>${text.value}</h1>`
+    }
+
+  </script>
+</body>
+</html>
