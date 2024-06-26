@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: Pretendard;
+      color: #202632;
+    }
+    h2 {
+      color: #0064ff
+    }
+  </style>
+  <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div>
+    <button id="btn">영화 정보 요청하기</button>
+    <div id="movie">
+    </div>
+  </div>
+  
+  <script>
+    // 버튼 클릭했을 때 영화정보 받아와서 출력하기
+    // 통신을 하기 위해서는 필요한 구성 요소
+    // 1. 요청과 응답을 할 주소가 필요
+    // 2. 통신 방법 작성 (GET, POST)
+    // 3. 넘길 데이터를 작성
+    // 4. 성공과 실패할 때 처리할 공간 필요
+    // JSON 데이터를 활용할 때는 두가지만 기억하자
+    // 1. 꺼내려는 데이터가 객체 형태면 .Key로 접근
+    // 2. 꺼내려는 데이터가 배열 형태면 [인덱스]로 접근
+
+    const btn = $("#btn")
+    const movie = $("#movie")
+    btn.on("click", () => {
+      $.ajax({
+      // 1. 데이터를 요청할 서버의 주소 (필수 )
+      url: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=80f24b68f9f038ef4c61ea9e9f29637f&targetDt=20240625",
+      // 2. 전송하는 방법 (필수 X, 기본값 GET )
+      method: "GET",
+      // 3. 데이터를 보내는 공간 (필수 X)
+      // data : {id: "id", pw: "pw"},
+      success: (res) => {
+        // 성공함수 안에는 반드시 매개변수 필요
+        // 응답받은 데이터를 받아와야 함 (res)
+        const movieList = res.boxOfficeResult.dailyBoxOfficeList;
+        console.log(movieList)
+        console.log(movieList[0].movieNm);
+        for (item of movieList) {
+          console.log(item.movieNm);
+        }
+        alert("통신 성공")
+        movie.append(`<h2>2024년 6월 25일 박스오피스 순위</h2>`)
+        movieList.map((item) => {
+          movie.append(`<h4>${item.rank}. ${item.movieNm}</h4>
+          <p> 오늘의 관객수 : ${item.audiCnt}명</p>
+          <p> 개봉일 : ${item.openDt}</p>
+          <hr>
+          `)
+        })
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+    })
+
+    
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onclick="clickEvent()">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+
+    <script>
+        // 이벤트를 부여하는 방식 3가지 (인라인, 프로퍼티, 리스너 방식)
+        // 1. 인라인
+        // - 태그 안에 직접 JS를 작성하는 방식
+        // - 단점 : 보안이 안좋다, 재사용을 못한다.
+        // - 언제? : 내부함수(alert)는 작성해도 문제가 되지 않는다.
+
+        // 2. 프로퍼티 -> 속성
+        // - HTML과 JS를 분리하기 위해서 등장
+        // - 속성에 값을 부여하는 방식으로 이벤트를 처리
+        // - 함수를 넣을 때 소괄호를 없애고 넣어야 한다 -> 코드가 바로 실행되기 때문에
+        
+        const clickEvent = () =>{
+            alert("이벤트 실행");
+        }
+        document.getElementById("btn2").onclick = clickEvent;
+
+        // 3. 이벤트리스너 방식
+        // - HTML과 JS를 분리 + 이벤트를 여러 개를 연결 가능!
+        // - 권장 방식이고, 가장 많이 사용하는 방식
+        // - 태그를 가져와서, 이벤트리스너를 붙여준다.
+        // - 이벤트리스너 -> 이벤트가 발생할 때 태그에게 알려주는 역할
+        // - 리스너안에 필요한 매개변수 2가지
+        // - 1. 이벤트의 종류
+        // - 2. 실행할 이벤트(함수명을 작성, 함수를 직접 작성->익명함수)
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click",clickEvent)
+        btn3.addEventListener("click",()=>{
+            alert("함수 두번째 실행");
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.7.1.min.js"></script>
+  <style>
+    * {
+      font-family: Pretendard;
+      /* color: #202632; */
+    }
+  </style>
+</head>
+<body>
+  <h1 id="text">제이쿼리로 수집</h1>
+  <button id="btn">스타일 변경</button>
+
+  <script>
+    // 제이쿼리로 요소에 접근하는 방법
+    // 1. 요소에 접근 할 때는 $("선택자")를 사용.
+    // 2. $키워드 3가지 방법
+    // - 제이쿼리를 의미할 때 사용 $()
+    // - 변수명 앞에 $를 쓰는 경우가 있음 $_apple
+    // - 템플릿 문법에서 사용 ${}
+    let h1 = document.getElementById("text");
+    let jq = $("#text");
+    console.log(h1);
+
+    // 컨텐츠 수집
+    // innerHTML, innerText -> .html(), .text()
+    // 수정하고 싶은 경우
+    // - 순수 js버전에서는 = 대입
+    // -jq버전에서는 함수의 매개변수로 전달.
+    
+    // h1.innerHTML = "<h3>배고파요<h3>";
+    jq.html("<h3>배고파요..<h3>");
+
+    // 이벤트를 연결
+    // 이벤트를 연결할 때는 on 키워드를 활용한다. == addEventListener
+    // 디자인을 수정할 때는 css(), 여러 개를 변경할 때는 {데이터} 형식으로 객체 전달.
+    const text = document.getElementById("text");
+    document.getElementById("btn").addEventListener("click", () => {
+      text.style.color = "#0064ff";
+    });
+
+    $("#btn").on("click", () => {
+      // jq.css("color", "#0064ff");
+      // jq.css("font-size", "50px");
+      jq.css({color : "#0064ff", fontSize : "50px"})
+    });
+    
+
+  </script>
+</body>
+</html>
